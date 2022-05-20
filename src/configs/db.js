@@ -12,6 +12,7 @@ const mongoose = require("mongoose");
 const connect = () => {
     return mongoose.connect(
         "mongodb+srv://rajarsi:rajarsi12345@cluster0.gyrpm.mongodb.net/?retryWrites=true&w=majority"
-    )
+        //"mongodb://localhost:27017/authentication"
+        )
 }
 module.exports = connect;

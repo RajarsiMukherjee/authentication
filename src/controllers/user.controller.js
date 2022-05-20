@@ -2,13 +2,13 @@ const User = require('../models/user.model')
 const jwt = require('jsonwebtoken');
 
 const newToken = (user) => {
-    return jwt.sign({user}, "AJAY")
+    return jwt.sign({user}, "RAJARSI")
 }
 
 const register = async (req, res) => {
     try {
         let user = await User.findOne({email : req.body.email });
-
+        //console.log(user)
         if(user)
             return res.status(404).send({
                 status : "failed",
